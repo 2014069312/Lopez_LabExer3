@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.lopez_labexer3.SecondActivity">
+
+    <TextView
+        android:id="@+id/tv_filename2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Filename: "
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et_filename2"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="28dp"
+        android:layout_alignBaseline="@+id/tv_filename2"
+        android:layout_toRightOf="@+id/tv_filename2" />
+
+    <TextView
+        android:id="@+id/tv_display"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/et_filename2"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/btn_loadSharedPreferences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_display"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#a1d6e2"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="loadSharedPreferences"
+        android:text="LOAD SHARED PREFERENCES"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_loadInternalStorage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_loadSharedPreferences"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#a1d6e2"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="loadInternalStorage"
+        android:text="LOAD INTERNAL STORAGE"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_loadInternalCache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_loadInternalStorage"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#a1d6e2"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="loadInternalCache"
+        android:text="LOAD INTERNAL CACHE"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_loadExternalCache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_loadInternalCache"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#a1d6e2"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="loadExternalCache"
+        android:text="LOAD EXTERNAL CACHE"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_loadExternalStorage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_loadExternalCache"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#a1d6e2"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="loadExternalStorage"
+        android:text="LOAD EXTERNAL STORAGE"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_loadExternalPublic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_loadExternalStorage"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#a1d6e2"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="loadExternalPublicStorage"
+        android:text="LOAD EXTERNAL PUBLIC"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btn_loadExternalPublic"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#bcbabe"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="goBack"
+        android:text="PREVIOUS"
+        android:textColor="#ffffff"
+        android:textStyle="italic" />
+
+</RelativeLayout>

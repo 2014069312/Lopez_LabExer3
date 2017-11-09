@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.lopez_labexer3.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Data: "
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et_data"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="28dp"
+        android:layout_alignBaseline="@+id/tv_data"
+        android:layout_toRightOf="@+id/tv_data" />
+
+    <TextView
+        android:id="@+id/tv_filename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_data"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Filename: "
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et_filename"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/tv_filename"
+        android:layout_toRightOf="@+id/tv_filename"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btn_sharedPreferences"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_filename"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#1995ad"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="saveSharedPreference"
+        android:text="Shared Preferences"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_internalStorage"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_sharedPreferences"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#1995ad"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="saveInternalStorage"
+        android:text="Internal Storage"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_internalCache"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_internalStorage"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#1995ad"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="saveInternalCache"
+        android:text="Internal Cache"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_externalCache"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_internalCache"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#1995ad"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="saveExternalCache"
+        android:text="External Cache"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_externalStorage"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_externalCache"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#1995ad"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="saveExternalStorage"
+        android:text="External Storage"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_externalPublic"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_externalStorage"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#1995ad"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="saveExternalPublicStorage"
+        android:text="External Public"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@+id/btn_externalPublic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:backgroundTint="#bcbabe"
+        android:elevation="0dp"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="goToNext"
+        android:text="NEXT"
+        android:textColor="#ffffff"
+        android:textStyle="bold|italic" />
+
+</RelativeLayout>
