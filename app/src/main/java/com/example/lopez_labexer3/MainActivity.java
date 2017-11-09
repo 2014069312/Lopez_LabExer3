@@ -105,20 +105,20 @@ public class MainActivity extends AppCompatActivity {
 
     public void saveExternalPublicStorage(View view){
         String data = etData.getText().toString();
-        String filename = etFilename.getText().toString();
+        String path = etFilename.getText().toString();
 
         File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
-        File file = new File(folder, filename);
+        File file = new File(folder, path);
 
         writeData(file,data);
         Toast.makeText(this,"Saved to External Public Storage!",Toast.LENGTH_SHORT).show();
     }
 
-    public void writeData(File file, String data){
+    public void writeData(File file, String message){
 
         try{
             fos = new FileOutputStream(file);
-            fos.write(data.getBytes());
+            fos.write(message.getBytes());
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

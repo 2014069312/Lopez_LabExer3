@@ -16,6 +16,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import static android.R.attr.path;
+
 public class SecondActivity extends AppCompatActivity {
 
     Button btnLoadSharedPreferences, btnLoadInternalStorage, btnLoadInternalCache, btnLoadExternalCache, btnLoadExternalStorage,
@@ -129,11 +131,8 @@ public class SecondActivity extends AppCompatActivity {
 
     public void loadExternalPublicStorage(View view){
         String filename = etFilename2.getText().toString();
-
         StringBuffer buffer = new StringBuffer();
-
         int read = 0;
-        FileInputStream fis = null;
         try{
             fis = new FileInputStream(new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),filename));
             while((read = fis.read()) != -1){
